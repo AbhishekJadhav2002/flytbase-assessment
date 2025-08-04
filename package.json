@@ -1,0 +1,10 @@
+{
+    "name": "flytbase-assessment",
+    "author": {
+        "name": "Abhishek Jadhav",
+        "email": "email.abhishekjadhav@gmail.com"
+    },
+    "workspaces": [
+        "backend/**", "frontend/**"
+    ]
+}

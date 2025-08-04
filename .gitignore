@@ -1,0 +1,8 @@
+**DEMO**
+node_modules
+.next
+build
+dist
+.env
+.env.*
+!.env.example
