@@ -13,31 +13,35 @@ class MissionService {
         const mockMissions = [
             {
                 id: uuidv4(),
-                name: 'Weekly Security Patrol – New Delhi CP & Surrounds',
+                name: 'Urban Patrol – Jaipur Greater Loop',
                 type: 'security',
-                status: 'in-progress',
-                priority: 'medium',
+                status: 'completed',
+                priority: 'high',
                 droneId: null,
-                site: 'New Delhi CP area',
+                site: 'Jaipur Ops − Pink City Sector',
                 surveyArea: {
-                    name: 'New Delhi Central Circle & Garden',
+                    name: 'Jaipur Central & West Sector',
                     coordinates: [
-                        { lat: 28.6200, lng: 77.1900 },
-                        { lat: 28.6800, lng: 77.1900 },
-                        { lat: 28.6800, lng: 77.2500 },
-                        { lat: 28.6200, lng: 77.2500 }
+                        { lat: 26.82, lng: 75.65 },
+                        { lat: 26.82, lng: 75.80 },
+                        { lat: 27.02, lng: 75.80 },
+                        { lat: 27.02, lng: 75.65 }
                     ]
                 },
                 flightPlan: {
-                    pattern: 'perimeter',
+                    pattern: 'zigzag',
                     altitude: 60,
-                    speed: 10,
+                    speed: 12,
                     overlap: 65,
                     waypoints: [
-                        { lat: 28.6200, lng: 77.1900, alt: 60 },
-                        { lat: 28.6800, lng: 77.1900, alt: 60 },
-                        { lat: 28.6800, lng: 77.2500, alt: 60 },
-                        { lat: 28.6200, lng: 77.2500, alt: 60 }
+                        { lat: 26.82, lng: 75.65, alt: 60 },
+                        { lat: 26.82, lng: 75.80, alt: 60 },
+                        { lat: 26.88, lng: 75.80, alt: 60 },
+                        { lat: 26.88, lng: 75.65, alt: 60 },
+                        { lat: 26.94, lng: 75.65, alt: 60 },
+                        { lat: 26.94, lng: 75.80, alt: 60 },
+                        { lat: 27.00, lng: 75.80, alt: 60 },
+                        { lat: 27.00, lng: 75.65, alt: 60 }
                     ]
                 },
                 dataCollection: {
@@ -46,51 +50,175 @@ class MissionService {
                     captureMode: 'continuous'
                 },
                 schedule: {
-                    startTime: new Date(Date.now() - 2 * 60 * 60 * 1000),
-                    estimatedDuration: 30,
-                    actualDuration: 27
+                    startTime: new Date(Date.now() - 4 * 60 * 60 * 1000),
+                    estimatedDuration: 45,
+                    actualDuration: 42
                 },
                 progress: 100,
-                createdAt: new Date(Date.now() - 24 * 60 * 60 * 1000),
-                completedAt: new Date(Date.now() - 2 * 60 * 60 * 1000)
+                createdAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000),
+                completedAt: new Date(Date.now() - 4 * 60 * 60 * 1000)
             },
             {
                 id: uuidv4(),
-                name: 'Infrastructure Inspection – Greater Marine Drive, Mumbai',
+                name: 'Security Orbit – New Delhi CP Expanded',
+                type: 'security',
+                status: 'in-progress',
+                priority: 'medium',
+                droneId: null,
+                site: 'New Delhi CP + Connaught Junction',
+                surveyArea: {
+                    name: 'Delhi CP & Lutyens Zone',
+                    coordinates: [
+                        { lat: 28.59, lng: 77.12 },
+                        { lat: 28.59, lng: 77.30 },
+                        { lat: 28.73, lng: 77.30 },
+                        { lat: 28.73, lng: 77.12 }
+                    ]
+                },
+                flightPlan: {
+                    pattern: 'star',
+                    altitude: 70,
+                    speed: 10,
+                    overlap: 70,
+                    waypoints: [
+                        { lat: 28.59, lng: 77.12, alt: 70 },
+                        { lat: 28.6448, lng: 77.2167, alt: 70 },
+                        { lat: 28.73, lng: 77.30, alt: 70 },
+                        { lat: 28.73, lng: 77.12, alt: 70 },
+                        { lat: 28.6448, lng: 77.2167, alt: 70 },
+                        { lat: 28.59, lng: 77.30, alt: 70 },
+                        { lat: 28.6448, lng: 77.2167, alt: 70 },
+                        { lat: 28.59, lng: 77.12, alt: 70 }
+                    ]
+                },
+                dataCollection: {
+                    sensors: ['high-res-camera', 'thermal-imaging'],
+                    frequency: 8,
+                    captureMode: 'waypoint'
+                },
+                schedule: {
+                    startTime: new Date(Date.now() - 1 * 60 * 60 * 1000),
+                    estimatedDuration: 60
+                },
+                progress: 60,
+                createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000)
+            },
+            {
+                id: uuidv4(),
+                name: 'Marine Drive Full Span Infrastructure Scan',
                 type: 'inspection',
                 status: 'scheduled',
                 priority: 'high',
                 droneId: null,
-                site: 'South Mumbai – Marine Drive + Nariman Pt',
+                site: 'South Mumbai Coastal Promenade',
                 surveyArea: {
-                    name: 'Marine Drive Peninsula & Coastline',
+                    name: 'Mumbai Marine Drive Corridor + Chowpatty',
                     coordinates: [
-                        { lat: 18.9200, lng: 72.8000 },
-                        { lat: 18.9700, lng: 72.8000 },
-                        { lat: 18.9700, lng: 72.8500 },
-                        { lat: 18.9200, lng: 72.8500 }
+                        { lat: 18.88, lng: 72.78 },
+                        { lat: 18.88, lng: 72.84 },
+                        { lat: 18.95, lng: 72.84 },
+                        { lat: 18.95, lng: 72.78 }
                     ]
                 },
                 flightPlan: {
                     pattern: 'crosshatch',
                     altitude: 80,
-                    speed: 8,
+                    speed: 6,
                     overlap: 75,
                     waypoints: [
-                        { lat: 18.9200, lng: 72.8000, alt: 80 },
-                        { lat: 18.9200, lng: 72.8500, alt: 80 },
-                        { lat: 18.9700, lng: 72.8500, alt: 80 },
-                        { lat: 18.9700, lng: 72.8000, alt: 80 }
+                        { lat: 18.88, lng: 72.78, alt: 80 },
+                        { lat: 18.88, lng: 72.84, alt: 80 },
+                        { lat: 18.915, lng: 72.84, alt: 80 },
+                        { lat: 18.915, lng: 72.78, alt: 80 },
+                        { lat: 18.95, lng: 72.78, alt: 80 },
+                        { lat: 18.95, lng: 72.84, alt: 80 },
+                        { lat: 18.88, lng: 72.78, alt: 80 },
+                        { lat: 18.95, lng: 72.78, alt: 80 },
+                        { lat: 18.95, lng: 72.82, alt: 80 },
+                        { lat: 18.88, lng: 72.82, alt: 80 },
+                        { lat: 18.95, lng: 72.84, alt: 80 }
                     ]
                 },
                 dataCollection: {
                     sensors: ['high-res-camera', 'thermal-imaging'],
-                    frequency: 4,
+                    frequency: 5,
                     captureMode: 'waypoint'
                 },
                 schedule: {
-                    startTime: new Date(Date.now() + 30 * 60 * 1000),
-                    estimatedDuration: 60
+                    startTime: new Date(Date.now() + 45 * 60 * 1000),
+                    estimatedDuration: 75
+                },
+                progress: 0,
+                createdAt: new Date()
+            },
+            {
+                id: uuidv4(),
+                name: 'Crop Health Survey – Pune Greater West Farms',
+                type: 'inspection',
+                status: 'in-progress',
+                priority: 'medium',
+                droneId: null,
+                site: 'Pune Agri Hub Outskirts',
+                surveyArea: {
+                    name: 'Pune North-West Mega Farms',
+                    coordinates: [
+                        { lat: 18.45, lng: 73.75 },
+                        { lat: 18.45, lng: 73.87 },
+                        { lat: 18.59, lng: 73.87 },
+                        { lat: 18.59, lng: 73.75 }
+                    ]
+                },
+                flightPlan: {
+                    pattern: 'crosshatch',
+                    altitude: 60,
+                    speed: 8,
+                    overlap: 70,
+                    waypoints: []
+                },
+                dataCollection: {
+                    sensors: ['multispectral-camera'],
+                    frequency: 6,
+                    captureMode: 'waypoint'
+                },
+                schedule: {
+                    startTime: new Date(Date.now() - 45 * 60 * 1000),
+                    estimatedDuration: 55
+                },
+                progress: 48,
+                createdAt: new Date(Date.now() - 45 * 60 * 1000)
+            },
+            {
+                id: uuidv4(),
+                name: 'Mangrove Surveillance – Sundarbans Macro Grid',
+                type: 'environment',
+                status: 'scheduled',
+                priority: 'high',
+                droneId: null,
+                site: 'Indian Sundarbans West Sector',
+                surveyArea: {
+                    name: 'Sundarbans Expanded Zone',
+                    coordinates: [
+                        { lat: 21.60, lng: 88.50 },
+                        { lat: 21.60, lng: 89.10 },
+                        { lat: 22.20, lng: 89.10 },
+                        { lat: 22.20, lng: 88.50 }
+                    ]
+                },
+                flightPlan: {
+                    pattern: 'crosshatch',
+                    altitude: 85,
+                    speed: 7,
+                    overlap: 75,
+                    waypoints: []
+                },
+                dataCollection: {
+                    sensors: ['thermal-imaging', 'high-res-camera'],
+                    frequency: 12,
+                    captureMode: 'waypoint'
+                },
+                schedule: {
+                    startTime: new Date(Date.now() + 10 * 60 * 60 * 1000),
+                    estimatedDuration: 120
                 },
                 progress: 0,
                 createdAt: new Date()
@@ -110,8 +238,8 @@ class MissionService {
                     completedAt: mission.completedAt,
                     duration: mission.schedule.actualDuration,
                     distance: Math.round(Math.random() * 5000 + 1000),
-                    area: Math.round(Math.random() * 10000 + 5000),
-                    dataPoints: Math.round(Math.random() * 500 + 100),
+                    area: Math.round(Math.random() * 12000 + 2000),
+                    dataPoints: Math.round(Math.random() * 800 + 100),
                     status: 'success'
                 });
             }

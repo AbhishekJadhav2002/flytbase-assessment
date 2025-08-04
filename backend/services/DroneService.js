@@ -11,68 +11,68 @@ class DroneService {
         const mockDrones = [
             {
                 id: uuidv4(),
-                name: 'SkyEye-001',
+                name: 'Jaipur‑Alpha‑01',
                 model: 'DJI Matrice 350 RTK',
                 status: 'available',
-                battery: 95,
-                location: { lat: 28.6500, lng: 77.2200, alt: 0 },
-                lastSeen: new Date(),
-                capabilities: ['high-res-camera', 'thermal-imaging', 'lidar'],
-                maxFlightTime: 55,
-                maxRange: 15000,
-                site: 'New Delhi CP area'
-            },
-            {
-                id: uuidv4(),
-                name: 'Guardian-002',
-                model: 'Autel EVO Max 4T',
-                status: 'available',
-                battery: 87,
-                location: { lat: 18.9450, lng: 72.8250, alt: 0 },
+                battery: 92,
+                location: { lat: 26.9250, lng: 75.7800, alt: 0 },
                 lastSeen: new Date(),
                 capabilities: ['high-res-camera', 'thermal-imaging'],
-                maxFlightTime: 42,
+                maxFlightTime: 50,
                 maxRange: 12000,
-                site: 'South Mumbai – Marine Drive'
+                site: 'Jaipur Operations Center'
             },
             {
                 id: uuidv4(),
-                name: 'Scout-003',
-                model: 'DJI Mavic 3 Enterprise',
-                status: 'charging',
-                battery: 23,
-                location: { lat: 12.9700, lng: 77.5900, alt: 0 },
+                name: 'Pune‑Agri‑Surveillance',
+                model: 'Autel EVO Max 4T',
+                status: 'in-mission',
+                battery: 70,
+                location: { lat: 18.5300, lng: 73.8300, alt: 0 },
                 lastSeen: new Date(),
-                capabilities: ['high-res-camera', 'multispectral'],
+                capabilities: ['multispectral-camera'],
                 maxFlightTime: 45,
                 maxRange: 15000,
-                site: 'Bengaluru Center'
+                site: 'Pune Agri Hub'
             },
             {
                 id: uuidv4(),
-                name: 'Surveyor-004',
+                name: 'Kol‑Forest‑Eco‑01',
+                model: 'DJI Mavic 3 Enterprise',
+                status: 'available',
+                battery: 88,
+                location: { lat: 22.5726, lng: 88.3639, alt: 0 },
+                lastSeen: new Date(),
+                capabilities: ['high-res-camera', 'thermal-imaging'],
+                maxFlightTime: 45,
+                maxRange: 15000,
+                site: 'Kolkata Regional Base'
+            },
+            {
+                id: uuidv4(),
+                name: 'Chennai‑Coastal‑Drone',
                 model: 'Parrot ANAFI USA',
-                status: 'in-mission',
-                battery: 78,
-                location: { lat: 13.0825, lng: 80.2750, alt: 120 },
+                status: 'charging',
+                battery: 25,
+                location: { lat: 13.0837, lng: 80.2707, alt: 0 },
                 lastSeen: new Date(),
                 capabilities: ['high-res-camera', 'thermal-imaging'],
                 maxFlightTime: 32,
                 maxRange: 8000,
-                site: 'Chennai Coast'
+                site: 'Chennai Coastal'
             },
             {
                 id: uuidv4(),
-                name: 'Inspector-005',
+                name: 'Hyd‑Urban‑M300',
                 model: 'DJI M300 RTK',
                 status: 'maintenance',
                 battery: 0,
-                location: { lat: 17.3871, lng: 78.4917, alt: 0 },
-                lastSeen: new Date(Date.now() - 2 * 60 * 60 * 1000),
-                capabilities: ['high-res-camera', 'thermal-imaging', 'lidar'],
+                location: { lat: 17.3850, lng: 78.4867, alt: 0 },
+                lastSeen: new Date(Date.now() - 4 * 60 * 60 * 1000),
+                capabilities: ['lidar', 'thermal-imaging', 'high-res-camera'],
                 maxFlightTime: 55,
                 maxRange: 15000,
-                site: 'Hyderabad North'
+                site: 'Hyderabad Urban Ops'
             }
         ];
 
